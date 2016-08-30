@@ -1,13 +1,20 @@
 var express = require('express');
-var router = express.Router();
+var readFile= require('../services/readfile');
 
-/* GET home page.
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});*/
+var router = express.Router();
 
 router.get('/', function(req, res, next) {
     res.render('home', { title: 'Machine Management' });
+});
+
+router.get('/mgt', function(req, res, next) {
+
+    var render = function (domains, pathHosts) {
+        res.render('management', { title: 'Machine Management' , domains: domains, pathHosts: pathHosts });
+    };
+
+    readFile.read(render);
+
 });
 
 module.exports = router;
