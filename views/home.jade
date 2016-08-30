@@ -1,0 +1,75 @@
+//
+   Created by heureka on 30/08/16.
+
+extends layout
+block content
+    .container
+      //h1= title
+      form.form-horizontal
+        .form-group
+          label.col-sm-11.control-label(for='inputHosts')
+            input.form-control(type='text', id='inputHosts', value='/etc/hosts')
+          .col-sm-1
+            a.btn.btn-default Analice
+        .form-group
+          .col-sm-offset-0.col-sm-12
+            a.btn.btn-default New Machine
+        .form-group
+            table.table.table-striped.table-hover
+              tr
+                th #
+                th Domain
+                th IP
+                th VagrantFile
+                th Run
+                th Log
+              tr
+                td 1
+                td nodejserver.com
+                td 192.168.1.59
+                td
+                  input.form-control(type='text', value='/etc/hosts')
+                td
+                  a.btn.btn-default Starting ...
+                td
+                  a(href='#') View
+              tr
+                td 2
+                td nodejserver.com
+                td 192.168.1.59
+                td
+                  input.form-control(type='text', value='/etc/hosts')
+                td
+                  a.btn.btn-default Stop
+                td
+                  a(href='#') View
+              tr
+                td 3
+                td nodejserver.com
+                td 192.168.1.59
+                td
+                    input.form-control(type='text', value='/etc/hosts')
+                td
+                    a.btn.btn-default Stop
+                td
+                    a(href='#') View
+              tr
+                td 4
+                td nodejserver.com
+                td 192.168.1.59
+                td
+                    input.form-control(type='text', value='/etc/hosts')
+                td
+                    a.btn.btn-default Stop
+                td
+                    a(href='#') View
+              tr
+                td 5
+                td nodejserver.com
+                td 192.168.1.59
+                td
+                    input.form-control(type='text', value='/etc/hosts')
+                td
+                    a.btn.btn-default Stop
+                td
+                    a(href='#') View
