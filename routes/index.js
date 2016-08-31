@@ -9,11 +9,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/mgt', function(req, res, next) {
 
-    var render = function (domains, pathHosts) {
-        res.render('management', { title: 'Machine Management' , domains: domains, pathHosts: pathHosts });
-    };
-
-    readFile.read(render);
+  res.render('management', { title: 'Machine Management' , domains: [], pathHosts: '' });
 
 });
 

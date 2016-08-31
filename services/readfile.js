@@ -6,17 +6,20 @@ var fs       = require('fs'),
     Domain   = require('../model/domain'),
     readFile = {};
 
-var pathFile='/etc/hosts';
+var pathFile='/etc/hostsx';
 
-readFile.read = function ( cb) {
+readFile.read = function (pathFile, cb) {
+
+    if(undefined === pathFile || null === pathFile)
+        return cb('Path Incorrecto', 1);
 
     var domains = [];
     fs.readFile(pathFile, 'utf8', function(err, data) {
        if(err) {
-           cb([], '');
-           return console.log(err);
+           cb(err, 1);
+           return console.log(err, 1);
        }
-       cb(readFile.processFile(data), pathFile);
+       cb(readFile.processFile(data));
     });
 
     return domains;
